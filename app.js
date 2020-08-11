@@ -15,5 +15,5 @@ app.get("/oauth-github-callback", (req, res) => {
   return AuthCallbackService.callback(req, res);
 });
 
-app.listen(config.port);
-console.log(`App listening on http://localhost:${config.port}`);
+app.listen(process.env.PORT);
+console.log(`App listening on http://localhost:${process.env.PORT}`);
